@@ -1,6 +1,6 @@
 var generateBtn = document.querySelector("#generate");
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var numberChar = "0123456789";
 var specialChar = "!@#$%^&*()_-+={}[];:'`~<,>.?/|"
 var passwordLength;
@@ -24,6 +24,33 @@ function determineLength(){
     }
     return passwordLength;
 }
+//Function for uppercase letters
+function determineUppercase(){
+  uppercaseCheck = prompt("Do you want to include uppercase letters in your password? (Yes or No)");
+    uppercaseCheck = uppercaseCheck.toLowerCase();
+
+    if (uppercaseCheck === null || uppercaseCheck === ""){
+      alert("Please type Yes or No");
+      determineUppercase();
+
+    }else if (uppercaseCheck === "yes" || uppercaseCheck ==="y"){
+      uppercaseCheck = true;
+      return uppercaseCheck;
+
+    }else if (uppercaseCheck === "no" || uppercaseCheck ==="n"){
+      uppercaseCheck = false;
+      return uppercaseCheck;
+    
+    }else {
+      alert("Please type Yes or No");
+      determineUppercase();
+    }
+    return uppercaseCheck;
+}
+
+
+
+
 
 //
 // Add event listener to generate button
