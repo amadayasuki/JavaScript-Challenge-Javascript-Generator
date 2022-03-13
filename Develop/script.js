@@ -26,18 +26,18 @@ function determineLength(){
 }
 //Function for uppercase letters
 function determineUppercase(){
-  uppercaseCheck = prompt("Do you want to include uppercase letters in your password? (Yes or No)");
+  uppercaseCheck = prompt("Do you want to include uppercase letters in your password? (Type Yes or No)");
     uppercaseCheck = uppercaseCheck.toLowerCase();
 
     if (uppercaseCheck === null || uppercaseCheck === ""){
       alert("Please type Yes or No");
       determineUppercase();
 
-    }else if (uppercaseCheck === "yes" || uppercaseCheck ==="y"){
+    }else if (uppercaseCheck === "yes" || uppercaseCheck ==="Yes"){
       uppercaseCheck = true;
       return uppercaseCheck;
 
-    }else if (uppercaseCheck === "no" || uppercaseCheck ==="n"){
+    }else if (uppercaseCheck === "no" || uppercaseCheck ==="No"){
       uppercaseCheck = false;
       return uppercaseCheck;
     
@@ -47,11 +47,30 @@ function determineUppercase(){
     }
     return uppercaseCheck;
 }
+//Function for numbers
+function determineNumbers(){
+  numberCheck = prompt("Do you want to include numbers in your password? (Type Yes or No)");
+    numberCheck = numberCheck.toLowerCase();
+
+    if (numberCheck === null || numberCheck === ""){
+      alert("Please answer Yes or No");
+      determineNumbers();
+
+    }else if (numberCheck === "yes" || numberCheck ==="Yes"){
+      numberCheck = true;
+      return numberCheck;
+
+    }else if (numberCheck === "no" || numberCheck ==="No"){
+      numberCheck = false;
+      return numberCheck;
+    
+    }else {
+      alert("Please answer Yes or No");
+      determineNumbers();
+    }
+    return numberCheck;
+}
 
 
-
-
-
-//
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
