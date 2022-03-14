@@ -15,5 +15,6 @@ I was tasked to ensure the following:
 ### LIVE LINK
 
 
+### The following gif shows the web application's appearance and functionality:
 ![How to use Password Generator](passwordgenerator.gif)
 
